@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-#include <malloc.h>
+//#include <malloc.h>
 typedef float real;                    // Precision of float numbers
 #define MAX_STRING 500
 const long long max_size = 2000;         // max length of strings

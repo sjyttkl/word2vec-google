@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-#include <malloc.h>
+//#include <malloc.h>
 
 const long long max_size = 2000;         // max length of strings
 const long long N = 40;                  // number of closest words that will be shown
@@ -94,11 +94,11 @@ int main(int argc, char **argv) {
 		vocab[b * max_w + a] = 0;
 		for (a = 0; a < size; a++) {
 			// modify by hanleyzhang 20160705
-			//ÔÚ½øÐÐword2vecÑµÁ·Ê±£¬-binary 1 Ê±£¬´ÊÏòÁ¿Êä³öµ½vector.binÎª¶þ½øÖÆ£¬·ñÔòÎªfloat. 
+			//ï¿½Ú½ï¿½ï¿½ï¿½word2vecÑµï¿½ï¿½Ê±ï¿½ï¿½-binary 1 Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vector.binÎªï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½Îªfloat. 
 			//if(format == 1) 
-			fscanf(f,"%f",&M[a + b * size]);//vector.bin ÎªfloatÊ±£¬Ö»ÄÜÍ¨¹ýfscanf¶ÁÈ¡¸¡µãÏòÁ¿Êý¾Ý
+			fscanf(f,"%f",&M[a + b * size]);//vector.bin ÎªfloatÊ±ï¿½ï¿½Ö»ï¿½ï¿½Í¨ï¿½ï¿½fscanfï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			//else
-			//fread(&M[a + b * size], sizeof(float), 1, f);//vector.bin ÎªbinaryÊ±£¬Ö»ÄÜÍ¨¹ýfread¶ÁÈ¡¸¡µãÏòÁ¿Êý¾Ý¡£
+			//fread(&M[a + b * size], sizeof(float), 1, f);//vector.bin ÎªbinaryÊ±ï¿½ï¿½Ö»ï¿½ï¿½Í¨ï¿½ï¿½freadï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¡ï¿½
 			//fread(&M[a + b * size], sizeof(float), 1, f);
 		}
 		len = 0;
@@ -118,10 +118,10 @@ int main(int argc, char **argv) {
 		vocab[b * max_w + a] = 0;
 		for (a = 0; a < size; a++) {
 			// modify by hanleyzhang 20160705
-			//ÔÚ½øÐÐword2vecÑµÁ·Ê±£¬-binary 1 Ê±£¬´ÊÏòÁ¿Êä³öµ½vector.binÎª¶þ½øÖÆ£¬·ñÔòÎªfloat. 
-			//if(format == 1) fscanf(f,"%f",&M[a + b * size]);//vector.bin ÎªfloatÊ±£¬Ö»ÄÜÍ¨¹ýfscanf¶ÁÈ¡¸¡µãÏòÁ¿Êý¾Ý
+			//ï¿½Ú½ï¿½ï¿½ï¿½word2vecÑµï¿½ï¿½Ê±ï¿½ï¿½-binary 1 Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vector.binÎªï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½Îªfloat. 
+			//if(format == 1) fscanf(f,"%f",&M[a + b * size]);//vector.bin ÎªfloatÊ±ï¿½ï¿½Ö»ï¿½ï¿½Í¨ï¿½ï¿½fscanfï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			//else
-			fread(&M[a + b * size], sizeof(float), 1, f);//vector.bin ÎªbinaryÊ±£¬Ö»ÄÜÍ¨¹ýfread¶ÁÈ¡¸¡µãÏòÁ¿Êý¾Ý¡£
+			fread(&M[a + b * size], sizeof(float), 1, f);//vector.bin ÎªbinaryÊ±ï¿½ï¿½Ö»ï¿½ï¿½Í¨ï¿½ï¿½freadï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¡ï¿½
 			//fread(&M[a + b * size], sizeof(float), 1, f);
 		}
 		len = 0;

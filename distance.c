@@ -16,7 +16,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include <malloc.h>
+//#include <malloc.h>
 
 const long long max_size = 2000;         // max length of strings
 const long long N = 150;                  // number of closest words that will be shown

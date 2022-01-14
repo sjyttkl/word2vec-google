@@ -3,9 +3,10 @@
 
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include <malloc.h>
+//#include <malloc.h>
 
 const long long max_w = 50;              // max length of vocabulary entries
 int format = 1;//1: binary to text other:text to binary 
